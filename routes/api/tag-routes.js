@@ -8,10 +8,10 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findAll({
-      attributes: ['id', 'tag_name'],
+     
       include: [{
         model: 'Product',
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+        through: ProductTag
 
       }]
     });
@@ -28,10 +28,11 @@ router.get('/:id', async (req, res) => {
     const tagData = await Tag.findOne(req.params.id, {
       include: [{
         model: Product,
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+        through: ProductTag
       }]
     });
-    if (!categoryData) {
+    if (!tagData) {
       res.status(404).json({ message: 'no category found' });
       return;
     }
@@ -54,7 +55,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-  tag.update(req.body, {
+  Tag.update(req.body, {
     where: {
       id: req.params.id,
     }
