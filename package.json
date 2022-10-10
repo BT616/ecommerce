@@ -1,0 +1,30 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Basically the beginning to amazons downfall.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon --watch server.js",
+    "seed": "node ./seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BT616/ecommerce.git"
+  },
+  "author": "bt616",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BT616/ecommerce/issues"
+  },
+  "homepage": "https://github.com/BT616/ecommerce#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "4.16",
+    "sequelize": "5.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
