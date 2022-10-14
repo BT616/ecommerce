@@ -33,16 +33,16 @@
 
 
 
-  ## Usage
+  ## test
   To use the app 
   node Initiate the database with 'mysql -u root -p', then 'source db/schema.sql' to create the tables. Exit the mysql terminal and from bash or zsh, type 'npm run seed' to seed the data into your tables. Now you can run 'npm start' to start your server
 
   ## Contribute 
   email or fork and contribute
 
-  ## Test 
-  npm start
-
+  ## usage
+https://drive.google.com/file/d/1jUkLXUjaFQREmRYtCpr_FZoJgt3Tt9dZ/view
+  
   ## Contact 
   bt616
   
